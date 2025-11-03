@@ -1,6 +1,6 @@
 package ie.atu.week7;
 
-public class Management {
+public class Customer {
     String customerId;
     String name;
     String email;
