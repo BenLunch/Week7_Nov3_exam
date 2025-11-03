@@ -59,9 +59,12 @@ public class ManagementApp {
                     counter++;
                 }
             }
+            case "4" -> {
+                    System.out.println("Goodbye");
+            }
             default -> {
                 break;
             }
-        }
+         }
     }
 }
