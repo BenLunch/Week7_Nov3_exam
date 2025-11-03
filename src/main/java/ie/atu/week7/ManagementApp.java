@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ManagementApp {
     public static void main(String[] args) {
+        int customerNum = 0;
+        int i = 0;
         Scanner scan1 = new Scanner(System.in);
         //Array Lis to house Customer information
         List<Customer> customerList = new ArrayList<>();
@@ -18,5 +20,33 @@ public class ManagementApp {
         System.out.println("Please enter which operation you would like: ");
         //Scan the user's input
         String operation = scan1.next();
+        switch(operation){
+            case"1" -> {
+                System.out.println("Please enter the number of customers you wish to add");
+                customerNum = scan1.nextInt();
+                scan1.nextLine();
+                while(i < customerNum){
+                    Customer customer1 = new Customer();
+                    System.out.println("Please enter the customer ID: ");
+                    String customerId = scan1.nextLine();
+                    System.out.println("Please enter the customer name: ");
+                    String name = scan1.nextLine();
+                    System.out.println("Please enter the customer email: ");
+                    String email = scan1.nextLine();
+                    System.out.println("Please enter the customer phone number: ");
+                    String phoneNumber = scan1.nextLine();
+                    System.out.println("------------------------------------------------");
+                    customer1.setCustomerId(customerId);
+                    customer1.setName(name);
+                    customer1.setEmail(email);
+                    customer1.setPhoneNumber(phoneNumber);
+                    customerList.add(customer1);
+                    i++;
+                }
+            }
+            default -> {
+                break;
+            }
         }
     }
+}
