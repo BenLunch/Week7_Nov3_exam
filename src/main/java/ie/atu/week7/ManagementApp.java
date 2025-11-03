@@ -70,5 +70,6 @@ public class ManagementApp {
                 }
             }
         }
+        scan1.close();
     }
 }
