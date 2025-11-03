@@ -44,6 +44,21 @@ public class ManagementApp {
                     i++;
                 }
             }
+            case"2" -> {
+
+            }
+            case"3" -> {
+                int counter = 1;
+                for (Customer customer : customerList) {
+                    System.out.println("Customer " + counter + ":");
+                    System.out.println("Customer ID:" + customer.getCustomerId());
+                    System.out.println("Customer Name:" + customer.getName());
+                    System.out.println("Customer Email:" + customer.getEmail());
+                    System.out.println("Customer Phone Number:" + customer.getPhoneNumber());
+                    System.out.println("------------------------------------------------");
+                    counter++;
+                }
+            }
             default -> {
                 break;
             }
